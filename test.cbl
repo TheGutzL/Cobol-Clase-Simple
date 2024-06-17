@@ -1,17 +1,27 @@
        identification division.
        PROGRAM-ID. TEST.
-       author GUTZ.
-       date-written "16/06/2024".
-       date-modified "16/06/2024".
-       date-compiled "16/06/2024".
-       installation "Empresa".
-       security ""
-       remarks "Este es un programa de prueba".
+
+       environment division.
+       configuration section.
+           special-names.
+               decimal-point is comma.
+               symbolic characters LETRA-A LETRA-B LETRA-C LETRA-D
+                               are    66      67     68      69.
+               
+               INPUT-OUTPUT section.
+                   FILE-CONTROL.
+                       SELECT OPTIONAL ARCHIVO-EMPLEADOS
+                       ASSIGN TO "empleados.dat"
+                       organization is sequential
+               
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
-            DISPLAY "Hola Mundo en Cobol"
+            DISPLAY "Medio: " LETRA-A.
+            DISPLAY "Un cuarto: " LETRA-B.
+            DISPLAY "Tres cuartos: " LETRA-C.
+            DISPLAY "Tres cuartos: " LETRA-D.
             STOP RUN.
        END PROGRAM TEST.
