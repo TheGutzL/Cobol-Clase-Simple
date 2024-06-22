@@ -8,9 +8,10 @@
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
-       01 Valor PIC X Value "L".
+       01 Valor PIC X Value "A".
        PROCEDURE DIVISION.
            Condicionales.
            IF Valor IS A-G then
               display "Se ejecuto"
+           END-IF.
        END PROGRAM Clase.
